@@ -1,4 +1,4 @@
-package org.flyfish.springstudy.beans
+package org.flyfish.springstudy.kotlinstudy
 
 /**
  * Kotlin 默认所有的类都是 final 类型的，不能被继承
@@ -43,7 +43,7 @@ open class Fruit{
     }
 }
 
-class Apple : Fruit{
+class Apple : Fruit {
     constructor() : super()
 
     //如果子类 需要重写 父类的方法，则需要父类的对应方法也是 open关键字修饰的
@@ -62,6 +62,8 @@ open class Orange : Fruit() {
 
 ///------------------------------- 属性的重写-----------------------
 
+// 如果父类的属性是 val的，那么子类可以以 val或者 var来重写
+//如果父类的属性是 var,那么子类的仅可以以 var来重写
 open class MyParent{
     //声明 的属性默认也是 final的，不能被直接重写
     //如果属性也要能被重写，需要 在属性前增加 open 关键字

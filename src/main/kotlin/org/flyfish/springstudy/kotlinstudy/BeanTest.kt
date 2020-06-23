@@ -1,4 +1,4 @@
-package org.flyfish.springstudy.beans
+package org.flyfish.springstudy.kotlinstudy
 
               //        primary 构造方法里
 class Student (private val userName: String, private val age: Int, private val address: String) {

@@ -1,6 +1,6 @@
-package org.flyfish.springstudy.app
+package org.flyfish.springstudy.kotlinstudy
 
-class EmptyClass //如果一个为没有类体，则{}也可以省略
+class EmptyClass //如果一个类没有类体，则{}也可以省略
 
 
 class MyClass  constructor(username: String) {//primary constructor()
@@ -43,8 +43,8 @@ class MyClass  constructor(username: String) {//primary constructor()
 fun main(args: Array<String>) {
     val myClass1 = MyClass("dd")
 
-    val myClass = MyClass("ff",20)
-    val myClass2 = MyClass("ffff",22,"dd")
+    val myClass = MyClass("ff", 20)
+    val myClass2 = MyClass("ffff", 22, "dd")
 
     println("after 构造出 对象 $myClass")
 

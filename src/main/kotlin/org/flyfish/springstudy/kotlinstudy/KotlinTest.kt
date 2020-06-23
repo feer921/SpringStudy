@@ -1,11 +1,9 @@
-package org.flyfish.springstudy.app
+package org.flyfish.springstudy.kotlinstudy
 
 fun main(args: Array<String>) {
 
 
-
-    opt(1,3){
-        a, b ->
+    opt(1, 3) { a, b ->
         a * b
     }
 
