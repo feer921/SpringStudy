@@ -18,6 +18,11 @@ class ServerResponse {
      */
     var statusCode: Int = 0
 
+    /**
+     * 当前服务器时间戳
+     */
+    var serverTime: Long = System.currentTimeMillis();
+
 
 
 
