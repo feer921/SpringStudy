@@ -43,3 +43,11 @@ class EE{
     }
 
 }
+
+fun main(args: Array<String>) {
+    var d = D()
+//    d.output()// 这里就不能引用 在EE类里为 D类扩展的方法，因为不是顶层(包目前下)扩展 的方法
+
+
+
+}
