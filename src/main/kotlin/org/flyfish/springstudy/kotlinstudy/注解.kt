@@ -18,9 +18,10 @@ fun main(args: Array<String>) {
 AnnotationTarget.FUNCTION,//方法上
 AnnotationTarget.CONSTRUCTOR,//构造方法上
 AnnotationTarget.VALUE_PARAMETER,//值参数上
-AnnotationTarget.EXPRESSION//表达式上
+AnnotationTarget.EXPRESSION,//表达式上
+AnnotationTarget.FIELD, AnnotationTarget.PROPERTY_GETTER
 
-        )//用该元注解 标识本 注解的使用范围
+)//用该元注解 标识本 注解的使用范围
 annotation class MyAnnotation
 
 @MyAnnotation
@@ -80,5 +81,22 @@ annotation class MyAnnotation4(val arg1: KClass<*>/* 将某个classw作为注解
 }
 @MyAnnotation4(String::class,Int::class)
 class TestAnnotaion
+
+/**
+ * 注解 使用处目标 (use-site target)
+ * 在对类的属性或者 主构造方法的参数声明注解时，会存在多个Java元素都可以通过对应的Kotlin元素生成出来，
+ * 因此，在所生成的Java字节 码中，就会存在多个可能的位置 来生成相应的注解。若想精确指定如何来生成注解，那么可以使用注解的[使用处目标]
+ * 该[使用处目标]我的理解为 所要标注的注解具体作用限制在 什么目标
+ * 方式来实现。
+ */
+class TestAnnotaion2(@field:/* @field 即限制了 [MyAnnotation]作用在arg1这个属性上，如果没有这个目标
+  限制，则在本类的Java字节码中，[MyAnnotation]也可能存在 getArg1()的方法上
+ */ MyAnnotation val arg1:String,
+                     @get: /* 该目标即限制了[MyAnnotation]出现在 arg2的get方法处 */MyAnnotation val arg2:String
+){
+
+}
+
+
 
 
