@@ -36,7 +36,11 @@ fun main( ) {
 
 }
 
+fun test() {
+    GlobalScope.launch {
 
+    }
+}
 //fun main( /*args:Array<String>*//* since 1.3 is not necessary*/
 //
 //) {

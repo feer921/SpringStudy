@@ -5,13 +5,14 @@ import org.flyfish.springstudy.app.ServerResponse
 import org.flyfish.springstudy.beans.User
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
-@RestController("users")
+@RestController
+@RequestMapping("/api/user")
 class UserController {
 
-
-    @GetMapping("/details/v1/{userId}")
+    @GetMapping("/login/{userId}")
     fun getUserDetails(@PathVariable("userId") userId: String): ServerResponse? {
         val user = User()
         user.userId = userId

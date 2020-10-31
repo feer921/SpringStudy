@@ -3,7 +3,7 @@ package org.flyfish.springstudy.kotlinstudy
 /**
  * 对象表达式(object expression)
  *
- *  Java当中 匿名内部内在很多场景下都得到了大量使用
+ *  Java当中 匿名内部类在很多场景下都得到了大量使用
  *
  *  Kotlin的对象表达式就是为了解决Java的匿名内部类的缺陷而产生的
 */
@@ -57,6 +57,7 @@ class OwnerObjectExpressionClass2{
         println(method1().str)
 //        method2().str; //访问不到
     }
+
 }
 
 interface MyInterface{

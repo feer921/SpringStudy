@@ -8,4 +8,8 @@ public class MyArray {
     public void testVarArgs(String... args) {
 
     }
+
+    public String name = null;
+
+
 }

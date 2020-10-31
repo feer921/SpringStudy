@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.3.0.RELEASE"
-	id("io.spring.dependency-management") version "1.0.9.RELEASE"
+	id("org.springframework.boot") version "2.3.5.RELEASE"
+	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	kotlin("jvm") version "1.3.72"
 	kotlin("plugin.spring") version "1.3.72"
 }
@@ -10,6 +10,11 @@ plugins {
 group = "org.flyfish"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+//突然发现 编译不了 xx.java文件为 xx.class了，加上这个源码集
+sourceSets.main{
+	java.srcDirs("src/main/kotlin")
+}
 
 repositories {
 	mavenCentral()
@@ -26,6 +31,7 @@ dependencies {
 	}
 
 }
+
 
 tasks.withType<Test> {
 	useJUnitPlatform()
