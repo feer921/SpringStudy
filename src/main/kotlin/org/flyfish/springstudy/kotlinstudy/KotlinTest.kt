@@ -12,6 +12,10 @@ fun main(args: Array<String>) {
 //        a * b
 //    }
 
+    val str = " "
+    //如果 是 str = "",则都是 true
+    println("str.isBlank() ? ${str.isBlank()}") //true
+    println("str.isEmpty() ? ${str.isEmpty()}") //false
     for (index in 0 until 5){
         println(index)
     }
@@ -26,13 +30,13 @@ fun main(args: Array<String>) {
 //                it.length
 //            }
 //    println(a.javaClass)
-    runBlocking {
-        try {
-            failCal()
-        }finally {
-            println("fail Cal ")
-        }
-    }
+//    runBlocking {
+//        try {
+//            failCal()
+//        }finally {
+//            println("fail Cal ")
+//        }
+//    }
 }
 
 fun add(x: Int, y: Int) = x + y
